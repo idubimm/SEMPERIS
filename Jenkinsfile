@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Print Current Working Directory') {
             steps {
-                sh 'pwd'
+                sh 'echo `ls -ltr `'
             }
         }
         stage('Build Docker Image') {

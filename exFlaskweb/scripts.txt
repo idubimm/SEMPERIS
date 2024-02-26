@@ -38,3 +38,9 @@ http://localhost:8080
 docker run -d -p 8080:8080 -p 50000:50000 -v /home/kali/projects/docker/jenkins:/var/jenkins_home --name=jenkins jenkins/jenkins:lts
 
 
+
+
+  git add .
+  git commit -m '.... 1'
+  git push origin main
+ 
