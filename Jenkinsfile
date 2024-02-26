@@ -4,6 +4,11 @@ pipeline {
         DOCKER_IMAGE_TAG = 'idubi/flask-htm:latest'
     }
     stages {
+        stage('Print Current Working Directory') {
+            steps {
+                sh 'pwd'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 script {
