@@ -7,7 +7,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('-t ${DOCKER_IMAGE_TAG} ./exFlaskWeb/')
+                    docker.build('-t idubi/flask-htm:latest ./exFlaskWeb/ ')
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
                                     {
                         docker.withRegistry('https://hub.docker.com/repositories/idubi', 'idubi_docker') 
                                             {
-                                                   docker.image('${DOCKER_IMAGE_TAG}').push()
+                                                   docker.image('idubi/flask-htm:latest').push()
                                             }
                                     }
                     }

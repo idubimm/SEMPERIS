@@ -1,5 +1,5 @@
-docker run -d --name flask-boker-tov -it -p 5000:5000 flask-2-html
-docker build -t flask-2-html .
+docker run -d --name flask-htm -it -p 5000:5000 flask-2-html
+docker build -t flask-htm .
 docker run -d --name flask-htm -it -p 5000:5000 flask-2-html
 
 docker build and push 
