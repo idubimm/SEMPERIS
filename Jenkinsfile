@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('-t flask-htm ./exFlaskweb/ ')
+                    docker.build('-t flask-htm ./exFlaskweb/')
                 }
             }
         }
