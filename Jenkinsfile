@@ -4,7 +4,7 @@ pipeline {
         DOCKER_IMAGE_TAG = 'idubi/flask-htm:latest'
     }
     stages {
-        stage('Print Current Working Directory') {
+        stage('Print-Current-Working-Directory') {
             steps {
                 sh 'echo `ls -ltr ./exFlaskweb/`'
             }
@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage('Push Docker Image') {
+        stage('Push-Docker-Image') {
             steps {
                 script {
                      withCredentials([usernamePassword(credentialsId: 'idubi_docker', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) 
