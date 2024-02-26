@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Print Current Working Directory') {
             steps {
-                sh 'echo `ls -ltr `'
+                sh 'echo `ls -ltr ./exFlaskWeb/`'
             }
         }
         stage('Build Docker Image') {
