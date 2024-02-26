@@ -16,7 +16,7 @@ pipeline {
                 script {
                      withCredentials([usernamePassword(credentialsId: 'idubi_docker', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) 
                                     {
-                        docker.withRegistry('hhttps://hub.docker.com/repository/docker/idubi', 'idubi_docker') 
+                        docker.withRegistry('https://hub.docker.com/repository/docker/idubi', 'idubi_docker') 
                                             {
                                                    docker.image('${DOCKER_IMAGE_TAG}').push()
                                             }
