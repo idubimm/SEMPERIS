@@ -27,8 +27,4 @@ pipeline {
         }
     }
 }
-
-   withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKERHUB_USERNAME', passwordVariable: 'DOCKERHUB_PASSWORD')]) {
-                        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                            docker.image(DOCKER_IMAGE_TAG).push()
-                            
+ 
