@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Print Current Working Directory') {
             steps {
-                sh 'echo `ls -ltr ./exFlaskWeb/`'
+                sh 'echo `ls -ltr ./exFlaskweb/`'
             }
         }
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('-t idubi/flask-htm:latest ./exFlaskWeb/ ')
+                    docker.build('-t idubi/flask-htm:latest ./exFlaskweb/ ')
                 }
             }
         }
