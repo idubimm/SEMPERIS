@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: idubi
+      POSTGRES_PASSWORD: idubi
+      POSTGRES_DB: postgresdubi
+    volumes:
+      - postgres_data:/home/kali/projects/docker-compose/postgres/_data
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ido.bistry@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: idubi
+    ports:
+      - "5050:80"
+
+volumes:
+  postgres_data:
